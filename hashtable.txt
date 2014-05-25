@@ -1,0 +1,142 @@
+﻿/*
+ * Creado por SharpDevelop.
+ * Usuario: Sandra Zuñiga
+ * Fecha: 25/05/2014
+ * Hora: 12:22 a. m.
+ * 
+ * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
+ */
+using System;
+ using System.Collections;
+ 
+ 
+namespace HASH_TABLE
+{
+	class Program
+	{
+		
+    		 static void Main (string[] args)
+    		 	 {
+    		 	 
+    		 	 
+    		 	 Console.WriteLine("Hash Table");
+    		 	 
+    		 	 
+    		 	 
+					 Hashtable p= new Hashtable ();
+					 Console.WriteLine ("Carlos");
+					 Console.WriteLine ("Ricardo");
+					 Console.WriteLine ("Guillermo");
+					
+					  foreach (int key in p. Keys)
+							 {
+							     Console.WriteLine(key);
+							 }
+	 
+											 Console.WriteLine("\n"); 
+					  
+					 foreach (string value in p. Values )
+							 {
+							     Console.WriteLine(value);
+							 }
+											  Console.WriteLine("\n"); 
+									 
+					 
+					  Console.WriteLine("Seleccione el movimiento que desea realizar; \n\n\t 1) Revisar una persona \n\t 2) " +
+					                   "Eliminar una persona \n\t 3) Agregar una persona");
+					 
+					  int opc = int.Parse (Console.ReadLine());
+					 
+														  Console.WriteLine("\n \n");
+					   
+						switch (opc)
+		           			 {
+				                case 1: 
+									
+									string nom;
+									Console.WriteLine ("escribe el nombre de la persona a revisar \n");
+									nom=Console.ReadLine();
+									
+								
+									if (p.ContainsValue (nom))
+							          	{
+							          	   Console.WriteLine ("Este nombre ya está en la lista");
+							          	}
+							  		else 
+							  			{
+							  			   Console.WriteLine ("Este nombre no está en la lista");
+							  			}
+					  			break;
+					  		
+				                case 2: Console.Write("escribe el número de la persona a eliminar \n");
+				                		{
+				                			 int num = int.Parse (Console.ReadLine());
+				                			 p.Remove (num);
+				                		}
+								                
+				                				foreach (int key in p. Keys )
+													 {
+													     Console.WriteLine(key);
+													 }
+				
+					 
+													 Console.WriteLine("\n"); 
+												  
+											    foreach (string value in p. Values )
+													 {
+													     Console.WriteLine(value);
+													 }
+														  Console.WriteLine("\n"); 
+				                
+				                
+				                        break;
+				                
+				                        
+				                        
+				                        
+				                        
+				                        case 3: 
+					                		{
+					                			
+												Console.WriteLine ("escribe el número de la persona a editar \n");
+												
+												int num = int.Parse (Console.ReadLine());
+				                			 
+							
+													p.Remove (num);
+												
+												string nomb;
+								             	Console.WriteLine ("escribe el nuevo nombre \n");
+												nomb=Console.ReadLine();
+												
+												p.Add (4,nomb);
+												
+											}
+
+				                       foreach (int key in p. Keys )
+													 {
+													     Console.WriteLine(key);
+													 }
+				
+					 
+													 Console.WriteLine("\n"); 
+												  
+											    foreach (string value in p. Values )
+													 {
+													     Console.WriteLine(value);
+													 }
+														 Console.WriteLine("\n"); 
+				                        
+				                        break;
+							
+					  }
+					 
+					 
+					  Console.WriteLine("\n \n"); 
+					  Console.WriteLine("\n \n"); 
+								 
+					 Console.Write("Press any key to continue . . . ");
+					 Console.ReadKey(true);
+				}
+		}
+	}
